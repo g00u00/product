@@ -10,6 +10,7 @@ export function useProducts() {
 
     async function fetchProducts() {
         const response = await axios.get<IProduct[]>('https://fakestoreapi.com/products?limit=2')
+        // const response = await axios.get<IProduct[]>('../../public/objects_items.txt')
         setProducts(response.data)
 
     }
