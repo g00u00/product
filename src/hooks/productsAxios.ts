@@ -10,7 +10,7 @@ export function useProducts() {
 
     async function fetchProducts() {
         const response = await axios.get<IProduct[]>('https://fakestoreapi.com/products?limit=2')
-        // const response = await axios.get<IProduct[]>('../../public/objects_items.txt')
+        //const response = await axios.get<IProduct[]>('http://localhost:3000/public/obects_items.txt')
         setProducts(response.data)
 
     }
