@@ -9,7 +9,8 @@ export function useProducts() {
     }
 
     async function fetchProducts() {
-        const response = await axios.get<IProduct[]>('https://fakestoreapi.com/products?limit=2')
+        // const response = await axios.get<IProduct[]>('https://fakestoreapi.com/products?limit=2')
+        const response = await axios.get<IProduct[]>('https://raw.githubusercontent.com/g00u00/product/main/public/objects_items.json')
         //const response = await axios.get<IProduct[]>('http://localhost:3000/public/obects_items.txt')
         setProducts(response.data)
 
